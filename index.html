@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Chosunilbo_myungjo";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* reset */
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      box-sizing: border-box;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol,
+    ul {
+      list-style: none;
+    }
+    blockquote,
+    q {
+      quotes: none;
+    }
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: "";
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    a {
+      text-decoration: none;
+      color: initial;
+    }
+
+    /* css */
+    .flexColCenter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flexColStart {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 60px;
+      color: #ddecca;
+      font-family: "Chosunilbo_myungjo";
+      margin: 0 0 40px;
+    }
+
+    .content {
+      font-size: 30px;
+      line-height: 1.6;
+      font-family: "Chosunilbo_myungjo";
+      text-align: center;
+    }
+
+    .button {
+      font-size: 35px;
+      background-color: #568a35;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.5s;
+      padding: 0;
+      font-family: "Chosunilbo_myungjo";
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: white;
+      color: #568a35;
+    }
+
+    .rsWrapper {
+      width: 60%;
+    }
+
+    .br {
+      display: none;
+    }
+
+    .wrapper {
+      display: flex;
+    }
+
+    .mWrapper {
+      display: none;
+    }
+
+    .padding {
+      padding: 100px 0 0;
+    }
+
+    .margin {
+      margin: 0 0 40px;
+    }
+
+    @media (max-width: 1400px) {
+      .rsWrapper {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .rsWrapper {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .title {
+        font-size: 30px;
+      }
+
+      .content {
+        font-size: 18px;
+      }
+
+      .br {
+        display: initial;
+      }
+
+      .wrapper {
+        display: none;
+      }
+
+      .mWrapper {
+        display: flex;
+      }
+
+      .padding {
+        padding: 40px 0 0;
+      }
+
+      .margin {
+        margin: 0 0 30px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .content {
+        font-size: 16px;
+      }
+
+      .title {
+        font-size: 25px;
+      }
+    }
+  </style>
+  <body>
+    <section
+      class="flexColCenter"
+      style="background-color: #ddecca; min-height: 100vh"
+    >
+      <div
+        class="flexColStart rsWrapper"
+        style="
+          height: auto;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          min-height: 100vh;
+        "
+      >
+        <img
+          src="./src/bgImg.png"
+          style="width: 100%; min-height: 100vh"
+          class="wrapper"
+        />
+        <img
+          src="./src/bgImg_m.png"
+          style="width: 100%; min-height: 100vh"
+          class="mWrapper"
+        />
+        <div
+          class="flexColStart padding"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+          "
+        >
+          <p class="title">NAVER CAFE STUDY</p>
+          <p class="content margin">
+            카페 회원님들과 함께하는<br class="br" />
+            <span style="color: #a7c57e">투자정보 소통방</span>을 개설했습니다.
+          </p>
+          <p class="content">
+            코인, 주식, 부동산 등 자유롭게<br class="br" />
+            소통하실 수 있는 공간이며
+          </p>
+          <p class="content">
+            재테크 뿐 아니라 회원님들 간<br class="br" />
+            친목도모도 가능하니 많은
+          </p>
+          <p class="content margin">
+            소통과 함께 유익한 정보<br class="br" />
+            받아가시길 바랍니다.
+          </p>
+          <p class="content margin">
+            입장하시면 반갑게 인사부탁드리며<br class="br" />
+            <span style="color: #fb8059">1일 1출석은 필수</span>!!
+          </p>
+          <p class="content margin">
+            앞으로 카페와 소통방에서<br class="br" />
+            많은 활동 부탁드립니다 ^^
+          </p>
+          <a href="https://open.kakao.com/o/gt6B0j9" target="_blank">
+            <button class="button">입장하기 클릭</button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
